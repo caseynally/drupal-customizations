@@ -1,0 +1,69 @@
+{
+  "name": "drupal-composer/drupal-project",
+  "description": "Composer template for Drupal projects",
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url":  "https://packages.drupal.org/7"
+    },
+    "drupal-module-cob": {
+        "type": "package",
+        "package": {
+            "name": "City-of-Bloomington/cob",
+            "type": "drupal-module",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-module-cob",
+                "reference": "master"
+            }
+        }
+    }
+  },
+  "require": {
+    "composer/installers": "~1.0",
+    "derhasi/composer-preserve-paths": "0.1.*",
+    "drupal/drupal": "7.*",
+    "drupal/cas": "~1.0",
+    "drupal/date": "~2.0",
+    "drupal/devel": "~1.0",
+    "drupal/entity": "~1.0",
+    "drupal/libraries": "~2.0",
+    "drupal/link": "~1.0",
+    "drupal/markdown": "~1.0",
+    "drupal/pathauto": "~1.0",
+    "drupal/views": "~3.0",
+    "City-of-Bloomington/cob": "dev"
+  },
+  "conflict": {
+    "drupal/core": "8.*"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "rm README.md LICENSE .travis.yml phpunit.xml.dist"
+    ]
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/": ["type:drupal-core"],
+      "web/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+      "web/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"],
+      "web/sites/all/libraries/{$name}/": ["type:drupal-library"],
+      "web/sites/all/drush/{$name}/": ["type:drupal-drush"],
+      "web/profiles/{$name}/": ["type:drupal-profile"]
+    },
+    "preserve-paths": [
+      "web/sites/all/modules/contrib",
+      "web/sites/all/themes/contrib",
+      "web/sites/all/libraries",
+      "web/sites/all/drush",
+      "web/sites/default/settings.php",
+      "web/sites/default/files"
+    ]
+  }
+}
