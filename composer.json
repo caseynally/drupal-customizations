@@ -18,6 +18,71 @@
                 "reference": "master"
             }
         }
+    },
+    "drupal-module-onboard": {
+        "type": "package",
+        "package": {
+            "name": "City-of-Bloomington/onboard",
+            "type": "drupal-module",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-module-onboard",
+                "reference": "master"
+            }
+        }
+    },
+    "drupal-module-mediamanager": {
+        "type": "package",
+        "package": {
+            "name": "City-of-Bloomington/mediamanager",
+            "type": "drupal-module",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-module-mediamanager",
+                "reference": "master"
+            }
+        }
+    },
+    "drupal-module-cmisro": {
+        "type": "package",
+        "package": {
+            "name": "City-of-Bloomington/cmisro",
+            "type": "drupal-module",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-module-cmisro",
+                "reference": "master"
+            }
+        }
+    },
+    "drupal-module-ckan": {
+        "type": "package",
+        "package": {
+            "name": "City-of-Bloomington/ckan",
+            "type": "drupal-module",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-module-ckan",
+                "reference": "master"
+            }
+        }
+    },
+    "drupal-theme-cob": {
+        "type": "package",
+        "package": {
+            "name": "City-of-Bloomington/cob_theme",
+            "type": "drupal-theme",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-theme-cob",
+                "reference": "7.x-dev"
+            }
+        }
     }
   },
   "require": {
@@ -33,7 +98,8 @@
     "drupal/markdown": "~1.0",
     "drupal/pathauto": "~1.0",
     "drupal/views": "~3.0",
-    "City-of-Bloomington/cob": "dev"
+    "City-of-Bloomington/cob": "dev",
+    "City-of-Bloomington/cob_theme": "dev"
   },
   "conflict": {
     "drupal/core": "8.*"
@@ -52,6 +118,7 @@
     "installer-paths": {
       "web/": ["type:drupal-core"],
       "web/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+      "web/sites/all/themes/contrib/cob": ["City-of-Bloomington/cob_theme"],
       "web/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"],
       "web/sites/all/libraries/{$name}/": ["type:drupal-library"],
       "web/sites/all/drush/{$name}/": ["type:drupal-drush"],

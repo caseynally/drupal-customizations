@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "270f11a180bfcc58080b75ca537324ce",
+    "content-hash": "225ae6c1c39cf45d7afd1408bb1cee91",
     "packages": [
         {
             "name": "City-of-Bloomington/cob",
@@ -16,6 +16,16 @@
             },
             "type": "drupal-module",
             "time": "2016-05-04 16:25:05"
+        },
+        {
+            "name": "City-of-Bloomington/cob_theme",
+            "version": "dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Bloomington/drupal-theme-cob",
+                "reference": "7.x-dev"
+            },
+            "type": "drupal-theme"
         },
         {
             "name": "composer/installers",
@@ -1075,7 +1085,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "city-of-bloomington/cob": 20
+        "city-of-bloomington/cob": 20,
+        "city-of-bloomington/cob_theme": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
